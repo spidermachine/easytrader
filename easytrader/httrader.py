@@ -221,9 +221,10 @@ class HTTrader(WebTrader):
         )
 
     def create_basic_params(self):
-        raw_name = self.account_config['userName']
-        use_index_start = 1
-        user_name = raw_name[use_index_start:] if raw_name.startswith('0') else raw_name
+        user_name = self.account_config['userName']
+        # raw_name = self.account_config['userName']
+        # use_index_start = 1
+        # user_name = raw_name[use_index_start:] if raw_name.startswith('0') else raw_name
         basic_params = OrderedDict(
                 uid=self.__uid,
                 version=1,
